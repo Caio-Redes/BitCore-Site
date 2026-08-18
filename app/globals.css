@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0B0F14;
+  color: #E7EDF3;
+}
+
+::selection {
+  background: #C9814B;
+  color: #0B0F14;
+}
+
+:focus-visible {
+  outline: 2px solid #3FA9F5;
+  outline-offset: 2px;
+}
+
+/* Assinatura visual: trilha de circuito, ecoando o nome "BitCore" */
+.trace {
+  position: relative;
+  height: 2px;
+  background: linear-gradient(90deg, #C9814B 0%, transparent 70%);
+}
+.trace::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #E8A15C;
+  box-shadow: 0 0 8px 1px rgba(232, 161, 92, 0.6);
+}
+
+.trace-v {
+  position: relative;
+  width: 2px;
+  background: linear-gradient(180deg, #22303F 0%, transparent 100%);
+}
+
+.card-trace {
+  position: relative;
+}
+.card-trace::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 2px;
+  background: #C9814B;
+}
+.card-trace::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #E8A15C;
+}
+
+.bg-circuit {
+  background-image:
+    linear-gradient(rgba(34, 48, 63, 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 48, 63, 0.5) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+}
+
+/* Editor Tiptap - conteudo do post */
+.prose-bitcore {
+  color: #E7EDF3;
+  line-height: 1.75;
+}
+.prose-bitcore h1, .prose-bitcore h2, .prose-bitcore h3 {
+  font-weight: 600;
+  color: #E7EDF3;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+.prose-bitcore p {
+  margin-bottom: 1em;
+}
+.prose-bitcore a {
+  color: #3FA9F5;
+  text-decoration: underline;
+}
+.prose-bitcore code {
+  background: #161F2C;
+  border: 1px solid #22303F;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #E8A15C;
+}
+.prose-bitcore pre {
+  background: #0B0F14;
+  border: 1px solid #22303F;
+  padding: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1.2em;
+}
+.prose-bitcore pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #E7EDF3;
+}
+.prose-bitcore img {
+  border-radius: 8px;
+  border: 1px solid #22303F;
+  margin: 1.2em 0;
+}
+.prose-bitcore ul, .prose-bitcore ol {
+  margin: 1em 0 1em 1.4em;
+}
+.prose-bitcore ul { list-style: disc; }
+.prose-bitcore ol { list-style: decimal; }
+.prose-bitcore blockquote {
+  border-left: 3px solid #C9814B;
+  padding-left: 1em;
+  color: #7C8B9B;
+  margin: 1em 0;
+}
